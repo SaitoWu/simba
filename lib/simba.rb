@@ -11,10 +11,10 @@ module Simba
     end
 
     def self.banner
-      "simba [app_name]"
+      "simba [app_name] [options]"
     end
 
-    desc "Description:\n\n\tsimba is a generator for Sinatra applications."
+    desc "Description:\n\s\ssimba is a generator for Sinatra applications."
 
     argument :name, :desc => "The name of your sinatra app"
 
@@ -23,10 +23,16 @@ module Simba
       directory("simba/base_app/", self.destination_root)
     end
 
+    class_option "skip-bundle",
+                 :aliases => "-S", 
+                 :desc => "Skip bundle install when creating app skeleton",
+                 :banner => ""
     def bundle_dependencies
-      say "Bundling application dependencies using bundler."
-      in_root do
-        run 'bundle install'
+      unless options.include? "skip-bundle" then
+        say "Bundling application dependencies using bundler."
+        in_root do
+          run 'bundle install'
+        end
       end
     end
   end
