@@ -24,9 +24,11 @@ module Simba
     end
 
     def bundle_dependencies
-      say "Bundling application dependencies using bundler."
-      in_root do
-        run 'bundle install'
+      unless ARGV.include? '--skip-bundle' then
+        say "Bundling application dependencies using bundler."
+        in_root do
+          run 'bundle install'
+        end
       end
     end
   end
