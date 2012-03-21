@@ -12,7 +12,7 @@ simba aim to set up ruby off rails's best practice.
 
 ## Usage
 
-    $ simba appname
+    $ simba appname [--skip-bundle]
 
 ## Contributing
 
