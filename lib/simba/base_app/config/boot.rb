@@ -9,6 +9,11 @@ DB = Sequel.sqlite("./db/#{ENV["RACK_ENV"]}.db")
 set :sessions, true
 set :root, File.expand_path(".")
 set :views, settings.root + "/app/views"
+# sinatra reloader
+if development?
+  require "sinatra/reloader"
+  also_reload "lib/**/*.rb", "app/{models,helpers}/**/*.rb"
+end
 # assetpack support
 assets do
   css_compression :sass

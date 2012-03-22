@@ -6,7 +6,7 @@ gem "sqlite3"
 gem "sequel"
 gem "sinatra"
 gem "coffee-script"
-gem "sinatra-contrib", :require => "sinatra/contrib/all"
+gem "sinatra-contrib"
 gem "sinatra-assetpack", :require => "sinatra/assetpack"
 
 group :development do
