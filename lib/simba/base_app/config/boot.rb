@@ -16,20 +16,15 @@ if development?
 end
 # assetpack support
 assets do
-  css_compression :sass
-  js_compression  :uglify
-
   serve "/js", :from => "app/assets/js"
   serve "/css", :from => "app/assets/css"
   serve "/img", :from => "app/assets/img"
 
-  js :application, [
-    "/js/*.js"
-  ]
+  css_compression :sass
+  js_compression  :uglify
 
-  css :application, [
-    "/css/*.css"
-  ]
+  js :application, ["/js/*.js"]
+  css :application, ["/css/*.css"]
 end
 # require sinatra files
 Dir.glob "./{lib,app/models,app/helpers,app/controllers}/**/*.rb" do |f|

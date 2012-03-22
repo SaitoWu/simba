@@ -24,6 +24,7 @@ module Simba
 
     def setup_skeleton
       self.destination_root = name
+      @class_name = name
       directory("simba/base_app/", self.destination_root)
     end
 
