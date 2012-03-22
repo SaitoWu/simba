@@ -9,7 +9,7 @@ gem "coffee-script"
 gem "sinatra-contrib"
 gem "sinatra-assetpack", :require => "sinatra/assetpack"
 
-group :development do
+group :development, :test do
   gem "pry"
 end
 
