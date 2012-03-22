@@ -14,10 +14,13 @@ module Simba
       "simba [app_name]"
     end
 
-    desc "Description:\n\n\tsimba is a generator for Sinatra applications."
+    desc "Description:\n\n\tsimba is a generator for sinatra applications."
 
     argument :name, :desc => "The name of your sinatra app"
-    class_option :skip_bundle, :desc => "Skip bundle install", :default => false, :type => :boolean
+    class_option :skip_bundle,
+                 :default => false,
+                 :type => :boolean,
+                 :desc => "Skip bundle install when creating app skeleton"
 
     def setup_skeleton
       self.destination_root = name
