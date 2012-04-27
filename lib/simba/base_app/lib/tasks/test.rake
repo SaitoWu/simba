@@ -6,3 +6,10 @@
     end
   end
 end
+
+desc "run all tests"
+task "test" do
+  Dir.glob "./test/**/*_test.rb" do |f|
+    require f
+  end
+end
