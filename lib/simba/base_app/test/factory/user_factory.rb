@@ -1,3 +1,6 @@
-Factory.define :user do |u|
-  u.name "simba"
+# https://github.com/thoughtbot/factory_girl/wiki/Usage
+FactoryGirl.define do
+  factory :user do
+    name "simba"
+  end
 end

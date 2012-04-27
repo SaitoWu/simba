@@ -12,6 +12,7 @@ require "rack/test"
 DatabaseCleaner.strategy = :truncation
 
 class TestCase < MiniTest::Unit::TestCase
+  include FactoryGirl::Syntax::Methods
   def initialize *xs
     super
     DatabaseCleaner.clean
