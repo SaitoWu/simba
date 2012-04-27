@@ -1,12 +1,13 @@
 require "rubygems"
 require "bundler"
+require "yaml"
 
 # require "bundle gems"
 ENV["RACK_ENV"] ||= "development"
 Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 
 # init database
-DB = Sequel.sqlite("./db/#{ENV["RACK_ENV"]}.db")
+DB = Sequel.connect(YAML.load_file("./config/database.yml")["default"]["url"])
 
 # init sinatra
 set :sessions, true
