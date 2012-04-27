@@ -2,10 +2,10 @@ require_relative "../test_helper"
 
 class UserTest < TestCase
   def setup
-    Factory(:user)
+    @user = build :user
   end
-  
+
   def test_user_name
-    #dummy
+    # dummy
   end
 end
