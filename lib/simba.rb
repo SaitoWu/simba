@@ -1,5 +1,6 @@
 require "thor"
 require "thor/group"
+require "securerandom"
 require_relative "simba/version"
 
 module Simba
@@ -25,6 +26,7 @@ module Simba
     def setup_skeleton
       self.destination_root = name
       @class_name = name
+      @session_secret = SecureRandom.hex 16
       directory("simba/base_app/", self.destination_root)
     end
 
