@@ -1,10 +1,10 @@
 # Simba
 
-simba is a generator for sinatra applications.
+Simba is a generator for Sinatra applications.
 
-simba choose slim + sinatra + sequel to build your awesome app.
+Simba chooses slim + sinatra + sequel to build your awesome apps.
 
-simba aim to set up ruby off rails's best practice.
+Simba's aim to set up ruby off rails's best practices.
 
 ## Installation
 
