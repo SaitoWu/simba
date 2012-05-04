@@ -26,18 +26,4 @@ module Assets
       end
     end
   end
-
-  module Helpers
-    extend Sprockets::Helpers
-
-    def css file
-      file = "css/#{file}.css"
-      %Q|<link rel='stylesheet' href='#{Helpers.asset_path file}'/>|
-    end
-
-    def js file
-      file = "js/#{file}.js"
-      %Q|<script src='#{Helpers.asset_path file}'></script>|
-    end
-  end
 end
