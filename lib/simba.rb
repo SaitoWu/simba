@@ -27,7 +27,7 @@ module Simba
       self.destination_root = name
       @class_name = name
       @session_secret = SecureRandom.hex 16
-      directory("simba/base_app/", self.destination_root)
+      directory("../template/", self.destination_root)
     end
 
     def bundle_dependencies
