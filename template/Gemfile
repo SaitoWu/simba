@@ -1,28 +1,20 @@
 source "https://rubygems.org"
 
-gem "slim"
 gem "sqlite3"
-gem "sequel"
-gem "sinatra"
-gem "sinatra-contrib"
-gem "sinatra-flash"
-gem "sprockets"
-gem "sprockets-helpers"
+gem "slim", "~> 2.0.1"
+gem "sinatra", "~> 1.4.3"
+gem "sinatra-contrib", "~> 1.4.1"
+gem "sinatra-activerecord", "~> 1.2.3"
 
 # If you want to use mail
 # gem "pony"
 
 group :development do
-  gem "pry"
-  gem "sass"
-  gem "sprockets-sass"
-  gem "coffee-script"
-  gem "uglifier"
-  gem "capistrano"
+  gem "linner", "~> 0.4"
 end
 
 group :production do
-  gem "thin"
+  gem "puma"
 end
 
 group :test do

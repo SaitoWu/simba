@@ -21,11 +21,6 @@ if development?
   also_reload "lib/**/*.rb", "app/{models,helpers}/**/*.rb"
 end
 
-# assets
-require "sprockets/sass/functions"
-require settings.root + "/config/assets.rb"
-use Assets::Middleware if development?
-
 # require project files
 Dir.glob "./{lib,app/models,app/helpers,app/controllers}/**/*.rb" do |f|
   require f

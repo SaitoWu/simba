@@ -15,5 +15,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Simba::VERSION
 
-  gem.add_dependency("thor", "~> 0.14.6")
+  gem.add_dependency("thor", "~> 0.18")
 end
