@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title new
+    meta name="keywords" content="website"
+    link rel="stylesheet" href=asset_path("/assets/app.css")
+  body
+    == yield
+    script src=asset_path("/assets/app.js")
+    script =="require(\"app\")()"

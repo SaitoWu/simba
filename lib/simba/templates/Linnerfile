@@ -1,0 +1,29 @@
+paths:
+  app: "app/assets"
+  public: "public"
+groups:
+  scripts:
+    paths:
+      - app/assets/scripts
+    concat:
+      "/assets/app.js": "{app/assets/scripts,vendor}/**/*.{js,coffee}"
+    order:
+      - "vendor/jquery-1.10.2.js"
+      - "..."
+      - "app/scripts/app.coffee"
+  styles:
+    paths:
+      - app/assets/styles
+    concat:
+      "/assets/app.css": "{app/assets/styles,vendor}/**/[a-z]*.{css,scss,sass}"
+  images:
+    paths:
+      - app/assets/images
+    copy:
+      "/assets/images/": "app/assets/images/**/*.{png,gif}"
+modules:
+  wrapper: "cmd"
+  ignored: "vendor/**/*"
+  # definition: "/assets/app.js"
+revision: true
+notification: true
