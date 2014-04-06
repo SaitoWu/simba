@@ -1,3 +1,3 @@
-get '/' do
-  slim :'home/index'
+get "/" do
+  slim :"home/index"
 end

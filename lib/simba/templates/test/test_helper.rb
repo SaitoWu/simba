@@ -1,4 +1,4 @@
-ENV['RACK_ENV'] ||= "test"
+ENV["RACK_ENV"] ||= "test"
 require_relative "../config/boot.rb"
 
 # factory_girl

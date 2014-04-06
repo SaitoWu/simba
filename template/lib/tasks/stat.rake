@@ -1,11 +1,11 @@
 namespace :metric do
 
   desc "project statistics"
-  task 'stat' do
+  task "stat" do
     puts "All:"
-    stat_files Dir.glob('**/*.{rb,slim,coffee,scss}')
+    stat_files Dir.glob("**/*.{rb,slim,coffee,scss}")
     puts "\nRuby:"
-    stat_files Dir.glob('**/*.rb') - Dir.glob('test/**/*.rb')
+    stat_files Dir.glob("**/*.rb") - Dir.glob("test/**/*.rb")
   end
 end
 

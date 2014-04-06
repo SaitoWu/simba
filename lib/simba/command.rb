@@ -16,7 +16,7 @@ module Simba
 
     desc "new", "create the skeleton of project"
     def new(name)
-      directory('templates', name)
+      directory("templates", name)
     end
   end
 end

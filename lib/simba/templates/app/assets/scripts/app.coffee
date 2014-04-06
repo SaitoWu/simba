@@ -1,2 +1,2 @@
-module.exports = ->
-  console.log("Hello from simba!")
+$ ->
+  console.log "Hello From Simba!"
