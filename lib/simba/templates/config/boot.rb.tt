@@ -8,7 +8,7 @@ Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 # init sinatra
 set :root, File.expand_path(".")
 set :sessions, true
-set :session_secret, "f15f322b42a647f88139a0dec227d80f"
+set :session_secret, "<%= @secret %>"
 set :views, settings.root + "/app/views"
 set :database_file, settings.root + "/config/database.yml"
 

@@ -1,4 +1,5 @@
 require "thor"
+require "securerandom"
 
 module Simba
   class Command < Thor
@@ -16,6 +17,7 @@ module Simba
 
     desc "new", "create the skeleton of project"
     def new(name)
+      @secret = SecureRandom.hex 32
       directory("templates", name)
     end
   end
