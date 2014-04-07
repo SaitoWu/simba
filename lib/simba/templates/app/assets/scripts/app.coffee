@@ -1,2 +1,4 @@
+welcome = require "welcome"
+
 $ ->
-  console.log "Aha! Simba!"
+  welcome()
