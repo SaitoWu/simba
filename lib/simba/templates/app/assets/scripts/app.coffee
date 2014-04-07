@@ -1,2 +1,2 @@
 $ ->
-  console.log "Hello From Simba!"
+  console.log "Aha! Simba!"

@@ -8,7 +8,7 @@ groups:
     concat:
       "/assets/app.js": "{app/assets/scripts,vendor}/**/*.{js,coffee}"
     order:
-      - "vendor/jquery-1.10.2.js"
+      - "vendor/jquery.js"
       - "..."
       - "app/scripts/app.coffee"
   styles:
@@ -19,11 +19,19 @@ groups:
   images:
     paths:
       - app/assets/images
-    copy:
-      "/assets/images/": "app/assets/images/**/*.{png,gif}"
+    sprite:
+      "../app/assets/styles/icons.scss": "app/assets/images/**/*.png"
 modules:
   wrapper: "cmd"
   ignored: "vendor/**/*"
-  # definition: "/assets/app.js"
+  definition: "/assets/app.js"
+sprites:
+  selector: ".icon-"
+  path: "/assets/images/"
+  url: "/assets/images/"
 revision: true
 notification: true
+bundles:
+  jquery.js:
+    version: 1.11.0
+    url: http://code.jquery.com/jquery-1.11.0.js

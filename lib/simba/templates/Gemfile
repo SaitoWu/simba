@@ -11,8 +11,9 @@ gem "sinatra-activerecord", "~> 1.2.3"
 # gem "pony"
 
 group :development do
-  gem "linner", "~> 0.4.4"
+  gem "http", "~> 0.5.0"
   gem "therubyracer", "~> 0.12.0"
+  gem "linner", "~> 0.6", require: false
 end
 
 group :production do
