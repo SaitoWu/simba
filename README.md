@@ -2,9 +2,9 @@
 
 Simba is a generator for Sinatra applications.
 
-Simba chooses slim + sinatra + sequel to build your awesome apps.
+Simba chooses slim + sinatra + activerecord to build your awesome apps.
 
-Simba"s aim is to help you to use best practices when not using ruby on rails.
+Simba's aim is to help you to use best practices when not using ruby on rails.
 
 ## Installation
 
@@ -12,7 +12,19 @@ Simba"s aim is to help you to use best practices when not using ruby on rails.
 
 ## Usage
 
-    $ simba appname [--skip-bundle]
+    $ simba new appname
+
+    $ # development
+    $ bundle exec rackup
+
+    $ # production
+    $ rake asset:precompile
+    $ bundle exec rackup -E production
+
+## More
+
+Simba uses [Linner](https://github.com/SaitoWu/linner) as its asset packaging system,
+You can star it on the github page.
 
 ## Contributing
 
