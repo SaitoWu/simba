@@ -1,6 +1,0 @@
-.DS_Store
-.sass-cache
-*.db
-public/*.*
-coverage/
-.bundle
