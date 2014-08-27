@@ -12,7 +12,7 @@ gem "sinatra-activerecord", "~> 1.2.3"
 
 group :development do
   gem "therubyracer", "~> 0.12.0"
-  gem "linner", "~> 0.6", require: false
+  gem "linner", "~> 0.7", require: false
 end
 
 group :production do

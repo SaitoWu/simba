@@ -29,7 +29,8 @@ sprites:
   selector: ".icon-"
   path: "/assets/images/"
   url: "/assets/images/"
-revision: true
+revision:
+  manifest: manifest.yml
 notification: true
 bundles:
   jquery.js:
